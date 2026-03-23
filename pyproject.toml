@@ -53,8 +53,8 @@ package-data = { ApkPatcher = [
 
 
 [project.urls]
-Homepage = "https://github.com/TechnoIndian/ApkPatcher"
-Repository = "https://github.com/TechnoIndian/ApkPatcher.git"
+Homepage = "https://github.com/cocoba88/ApkPatcher-Modified"
+Repository = "https://github.com/cocoba88/ApkPatcher-Modified.git"
 Issues = "https://github.com/TechnoIndian/ApkPatcher/issues"
 
 [tool.setuptools.dynamic]
