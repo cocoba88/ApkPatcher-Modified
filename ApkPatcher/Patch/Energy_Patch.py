@@ -51,11 +51,7 @@ def Energy_Smali_Patch(smali_folders):
         # PATCH 3: DummyAdDialog countdown timer -> 1ms (instant reward)
         # Mengubah delay dari 1000ms (0x3E8) menjadi 1ms (0x1)
         # Efek: dialog iklan langsung selesai tanpa perlu menunggu
-        (
-            re.compile(r'const-wide/16 ([vp]\d+), 0x3e8', re.MULTILINE),
-            r'const-wide/16 \1, 0x1',
-            "DummyAdDialog timer 1000ms -> 1ms (instant reward, no ad needed)",
-        ),
+
     ]
 
     total_patched = 0
