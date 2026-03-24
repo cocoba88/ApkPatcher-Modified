@@ -38,16 +38,7 @@ def Energy_Smali_Patch(smali_folders):
             "isPro() -> always return true [Energy Unlimited]",
         ),
         # PATCH 2: hasEnoughEnergy() -> always return true
-        (
-            re.compile(
-                r'(\.method public final hasEnoughEnergy\(Landroid/content/Context;I\)Z\n    \.locals \d+\n\n'
-                r'    const-string [vp]\d+, "context"\n\n    invoke-static \{[^}]+\}, '
-                r'Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter\([^)]+\)V\n)',
-                re.MULTILINE
-            ),
-            r'\1    const/4 v0, 0x1\n\n    return v0\n\n    # PATCHED: always enough energy\n',
-            "hasEnoughEnergy() -> always return true",
-        ),
+
         # PATCH 3: DummyAdDialog countdown timer -> 1ms (instant reward)
         # Mengubah delay dari 1000ms (0x3E8) menjadi 1ms (0x1)
         # Efek: dialog iklan langsung selesai tanpa perlu menunggu
